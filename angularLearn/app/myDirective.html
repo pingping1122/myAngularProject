@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>myDirectiveApp</title>
+</head>
+
+<body ng-app="myDirectiveApp">
+
+<first-directive></first-directive>
+<p first-directive></p>
+
+<script src="vendor/angular.min.js"></script>
+<script>
+    var app = angular.module('myDirectiveApp', []);
+    app.directive('firstDirective', function () {
+        return {
+            restrict:'A',
+            template: '<h1>测试第一个自定义指令!</h1>'
+        };
+
+    });
+</script>
+
+</body>
+</html>

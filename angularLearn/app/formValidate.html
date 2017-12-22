@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form内置校验器+内置css</title>
+    <style>
+        label {
+            display: block;
+        }
+
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="formCtrl">
+<h3>form表单验证--简单示例</h3>
+<form name="mySimpleForm" ng-submit="save()">
+    <input type="text" ng-model="user1.name" required>
+    <input type="email" ng-model="user1.email" required>
+    <input type="button" ng-disabled="mySimpleForm.$invalid" value="提交">
+</form>
+
+
+<h3>form表单验证--稍复杂</h3>
+<form name="myComplexForm" novalidate>
+    <label>Name:</label>
+    <input type="text" ng-model="user.name" required>
+    <label>Email:</label>
+    <input type="email" ng-model="user.email" name="uEmail" required>
+    <div ng-show="myComplexForm.uEmail.$dirty&&myComplexForm.uEmail.$invalid">
+        <span ng-show="myComplexForm.uEmail.$error.required">请填写email</span>
+        <span ng-show="myComplexForm.uEmail.$error.email">邮件格式不正确</span>
+    </div>
+    <label>Gender:</label>
+    <input type="radio" ng-model="user.gender" value="male"/>male
+    <input type="radio" ng-model="user.gender" value="female"/>female
+    <input type="checkbox" ng-model="user.agree" name="userAgree" required>
+    I agree
+    <input type="text" name="userAgreeSign" ng-mdoel="user.agreeSign"
+           ng-show="user.agree" required>
+    <div ng-show="!user.agree||!user.agreeSign">please agree the sign</div>
+    <button ng-click="reset()" ng-disabled="isUnchanged(user)">reset</button>
+    <button ng-click="update(user)" ng-disabled="myComplexForm.$invalid||isUnchanged(user)">save</button>
+</form>
+<script src="vendor/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

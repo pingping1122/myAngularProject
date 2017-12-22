@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>mgAngularProjectDemo</title>
+
+</head>
+<body ng-controller="myCtrl" ng-init="person={name:'pp'}">
+<input type="text" ng-model="name">
+<input type="text" ng-model="person.name">
+<p>{{name}}</p>
+<p ng-bind="person.name"></p>
+<p> 我的第一个表达式:{{5+5}}</p>
+<form name="myForm">
+    <h3>测试输入验证:</h3>
+    <input type="email" name="myAdress" ng-model="text">
+    <span ng-show="myForm.myAdress.$error.email">不是一个合法地址</span>
+    {{myForm.myAdress.$invalid}}
+    {{myForm.myAdress.$valid}}
+    {{myForm.myAdress.$dirty}}
+    {{myForm.myAdress.$touched}}
+    {{myForm.myAdress.$pristine}}
+</form>
+<h3>测试过滤器:</h3>
+<ul ng-repeat="item in names">
+    <li>{{item|lowercase}}--{{lastName|uppercase}}</li>
+</ul>
+<h3>自定义过滤器：</h3>
+<p>{{msg|reverse}}</p>
+
+<h3>服务使用:</h3>
+<p>$location使用-absurl-获取完整url:{{absurl}}</p>
+<p>$location使用-url-当前url#后面的内容,包括参数和哈希值:{{url}}</p>
+<p>$location使用-pathUrl-当前url#后面的内容,不包括参数:{{pathUrl}}</p>
+<p>$location使用-protocol-当前url的协议:{{protocol}}</p>
+<p>$location使用-localhost-当前主机名:{{localhost}}</p>
+<p>$location使用-port-当前url的端口:{{port}}</p>
+<p>$location使用-hash-当前url的哈希值:{{hash}}</p>
+<p>$location使用-search-当前url的参数的序列化json对象:{{search}}</p>
+
+<h3>自定义服务使用：</h3>
+<p>{{serviceData}}</p>
+
+<h3>Select使用：</h3>
+<select ng-init="selectedName=names[0]"
+        ng-model="selectedName"
+        ng-options="x for x in names">
+</select>
+<select ng-init="selectedName=names[0]"
+        ng-model="selectedName"
+       >
+    <option ng-repeat=" x in names" >{{x}}</option>
+</select>
+
+
+<h3> bootstrap使用</h3>
+
+<!--<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>-->
+<script src="vendor/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

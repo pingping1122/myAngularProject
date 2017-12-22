@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body ng-app="myphonecatApp">
+
+<div class="panel">
+    <div class="panel-header">
+        标题栏
+    </div>
+    <div class="panel-body-menu">
+        <ul>
+            <li>
+                <a href="#!/">主页</a>
+            </li>
+            <li>
+                <a href="#!/detail">详情</a>
+            </li>
+        </ul>
+    </div>
+    <div class="panel-body-content">
+        <div ng-view></div>
+    </div>
+    <div class="panel-footer">
+        脚尾区
+    </div>
+</div>
+<script src="node_modules/.1.6.7@angular/angular.min.js"></script>
+<script src="node_modules/.1.6.7@angular-route/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="phone-list/phone-list-ctrl.js"></script>
+<script src="phone-detail/phone-detail-ctrl.js"></script>
+</body>
+</html>

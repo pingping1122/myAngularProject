@@ -1,0 +1,11 @@
+{
+  "name": "uirouter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "lpp",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-ui-router": "^1.0.3"
+  }
+}

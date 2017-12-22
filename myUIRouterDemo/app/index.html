@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myUiRouterApp">
+<head>
+    <meta charset="UTF-8">
+    <title>UIRouterDemo</title>
+    <link rel="stylesheet" href="common.css" type="text/css">
+</head>
+<body>
+<!-- 简单的ui-router示例-->
+<!--
+<a ui-sref="home">home</a>
+<a ui-sref="about">about</a>
+<ui-view></ui-view>-->
+
+<!-- 深层嵌套的ui-router示例-->
+<div class="panel">
+    <div class="panel-head"><span>登录</span> <span>注册</span></div>
+    <div class="panel-menu">
+        <div><a ui-sref="old">老图书馆</a>
+            <div><a ui-sref="old.page1">页面2</a></div>
+            <div><a ui-sref="old.page2">页面1</a></div>
+        </div>
+        <div><a ui-sref="new">新图书馆</a></div>
+    </div>
+    <div class="panel-content">
+        <ui-view></ui-view>
+    </div>
+    <div class="panel-footer">图书馆始建于1980年</div>
+
+</div>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="new/new.controller.js"></script>
+<script src="old/old.controller.js"></script>
+<script src="old/old.router.js"></script>
+<script src="old/page1/page1.controller.js"></script>
+<script src="old/page2/page2.controller.js"></script>
+</body>
+</html>
