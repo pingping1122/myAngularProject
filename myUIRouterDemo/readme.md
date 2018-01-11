@@ -9,4 +9,4 @@ https://ui-router.github.io/ng1/tutorial/helloworld
 
 效果如图:
 
-![ui-router三级导航](https://github.com/pingping1122/myAngularProject/images/ui-router.png)
+![ui-router三级导航](https://raw.githubusercontent.com/pingping1122/myAngularProject/master/images/ui-router.png)

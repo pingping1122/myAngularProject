@@ -8,4 +8,4 @@
 
 效果如图:
 
-![ng-route二级导航](https://github.com/pingping1122/myAngularProject/images/ng-route.png)
+![ng-route二级导航](https://raw.githubusercontent.com/pingping1122/myAngularProject/master/images/ng-route.png)
