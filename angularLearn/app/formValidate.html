@@ -43,6 +43,25 @@
     <button ng-click="reset()" ng-disabled="isUnchanged(user)">reset</button>
     <button ng-click="update(user)" ng-disabled="myComplexForm.$invalid||isUnchanged(user)">save</button>
 </form>
+
+
+<h3>form表单验证--密码确认校验</h3>
+<form name="passForm" novalidate>
+    <label>密码:</label>
+    <input type="text" ng-model="user.pass" required>
+    <div ng-show="passForm.passAgain.$dirty&&passForm.passAgain.$invalid"
+         ng-pattern="/^[0-9a-zA-Z]{6,32}$/">
+        <span ng-show="passForm.passAgain.$error.pattern">请填写6-32位密码</span>
+    </div>
+    <label>密码确认:</label>
+    <input type="email" ng-model="user.pass_again" name="passAgain" required>
+    <div ng-show="passForm.passAgain.$dirty&&passForm.passAgain.$invalid">
+        <span ng-show="passForm.passAgain.$error.pattern">密码不一致</span>
+    </div>
+
+    <button ng-click="commit(user)" ng-disabled="passForm.$invalid">save</button>
+</form>
+
 <script src="vendor/angular.min.js"></script>
 <script src="app.js"></script>
 </body>
