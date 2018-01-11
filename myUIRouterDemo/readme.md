@@ -6,3 +6,7 @@ https://ui-router.github.io/ng1/tutorial/helloworld
 布局使用grid的圣杯布局；
 
 包管理工具--yarn
+
+效果如图:
+
+![ui-router三级导航](https://github.com/pingping1122/myAngularProject/images/ui-router.png)
