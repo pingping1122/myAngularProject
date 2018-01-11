@@ -8,6 +8,7 @@
 * -------ng-disabled
 
 效果图:
+
 ![注册表单验证](https://raw.githubusercontent.com/pingping1122/myAngularProject/master/images/registerForm.png)
 
 [1]表单建立
