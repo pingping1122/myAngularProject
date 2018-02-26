@@ -1,0 +1,126 @@
+/*颜色变量*/
+.head {
+  background-color: #12d5b5;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  padding: 0 7px;
+}
+.head .text {
+  color: #fff;
+}
+.head .custom {
+  background-color: #feae11;
+  color: #fff;
+  border: 2px dashed #feae11;
+  margin-top: 0.18666667rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.foot {
+  border-top: 1px solid #d4d4d4;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  height: 40px;
+  line-height: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0;
+}
+.foot li {
+  width: 33.3%;
+  font-size: 20px;
+  color: #9f9d9e;
+}
+.foot li.select {
+  background-color: #dbf9f4;
+  color: #0c12a3;
+}
+.foot .icon-position {
+  background-image: url(../../image/position.jpg);
+  width: 25px;
+  height: 21px;
+}
+.foot .icon-search {
+  background-image: url(../../image/search.jpg);
+  width: 25px;
+  height: 21px;
+}
+.foot .icon-person {
+  background-image: url(../../image/person.jpg);
+  width: 25px;
+  height: 21px;
+}
+.position-list {
+  margin: 0;
+  padding: 0;
+}
+.position-list .item {
+  margin: 0;
+  padding: 7px 3px;
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+.position-list .item .logo {
+  width: 65px;
+  height: 65px;
+  margin-right: 13px;
+}
+.position-list .item .title {
+  margin: 0;
+}
+.position-list .item .text {
+  margin: 0;
+}
+.bg-w {
+  background-color: #fff;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.d-ib {
+  display: inline-block;
+}
+.d-b {
+  display: block;
+}
+.ta-l {
+  text-align: left;
+}
+.ta-r {
+  text-align: right;
+}
+.ta-c {
+  text-align: center;
+}
+.va-t {
+  vertical-align: top;
+}
+.va-b {
+  vertical-align: bottom;
+}
+.va-c {
+  vertical-align: middle;
+}
+/*fs\h\w 函数来做自适应--在不同屏幕上正常显示*/
+/*iphone6--width-375px--平局分成10份*/
+/*unit--less函数用于将px单位自动转为rem*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  font-size: 0.42666667rem;
+  background-color: #eee;
+}

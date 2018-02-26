@@ -1,0 +1,24 @@
+{
+  "name": "myAngularWebApp",
+  "authors": [
+    "pingping1122 <2652902589@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-ui-router": "^1.0.13"
+  }
+}

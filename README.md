@@ -21,3 +21,5 @@
 效果如图:
 
 ![angularjs注册表单验证](https://raw.githubusercontent.com/pingping1122/myAngularProject/master/images/registerForm.png)
+
+[5]myAngularWebApp----基于angularjs的仿拉勾网移动web app

@@ -1,0 +1,39 @@
+@import "../variable.less";
+@import "../property.less";
+
+.foot {
+  border-top:1px solid @lineColor;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  height: 40px;
+  line-height: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 0;
+  li {
+    width: 33.3%;
+    font-size: 20px;
+    color: @muteColor;
+    &.select{
+      background-color: @highlightBgColor;
+      color:@highlightColor;
+    }
+  }
+  .icon-position{
+    background-image: url(../../image/position.jpg);
+    width:25px;
+    height:21px;
+  }
+  .icon-search{
+    background-image: url(../../image/search.jpg);
+    width:25px;
+    height:21px;
+  }
+  .icon-person{
+    background-image: url(../../image/person.jpg);
+    width:25px;
+    height:21px;
+  }
+}
