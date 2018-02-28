@@ -1,23 +1,11 @@
-<ul class="position-list bg-w">
-     <!--<li class="item">
-         <img class="f-l logo" src="image/company-1.jpg">
-         <h3 class="title">销售</h3>
-         <p class="text">千度[上海]互联网</br>
-             2018-01-02 01:02
-         </p>
-     </li>
-    <li class="item">
-        <img class="f-l logo" src="image/company-2.png">
-        <h3 class="title">web 前端</h3>
-        <p class="text">慕课网[北京]互联网</br>
-            2018-01-02 01:02
-        </p>
-    </li>-->
-    <li class="item" ng-repeat="item in data" style="padding-top:0">
-        <img class="f-l logo" ng-src="{{item.imgSrc}}" >
-        <h4 class="title" ng-bind="item.name"></h4>
+<ul class="position-list backgroundWhite">
+    <li ui-sref="position({id:item.id})"
+        class="item" ng-repeat="item in data" style="padding-top:0">
+        <img class="floatLeft logo" ng-src="{{item.imageUrl}}">
+        <h4 class="title" ng-bind="item.job"></h4>
         <p class="text">
-           {{item.companyName}}[{{item.city}}] + {{item.industry}}</br>
-           {{item.time}}</p>
+            {{item.companyName}}[{{item.cityName}}] + {{item.industryName}}</br>
+            {{item.date}}</p>
+        <div class="clear"></div>
     </li>
 </ul>

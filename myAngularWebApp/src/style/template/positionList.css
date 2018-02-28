@@ -1,39 +1,51 @@
 /*颜色变量*/
-.bg-w {
+.backgroundWhite {
   background-color: #fff;
 }
-.f-l {
+.floatLeft {
   float: left;
 }
-.f-r {
+.floatRight {
   float: right;
 }
 .clear {
   clear: both;
 }
-.d-ib {
+.displayInlineBlock {
   display: inline-block;
 }
-.d-b {
+.displayBlock {
   display: block;
 }
-.ta-l {
+.textAlignLeft {
   text-align: left;
 }
-.ta-r {
+.textAlignRight {
   text-align: right;
 }
-.ta-c {
+.textAlignCenter {
   text-align: center;
 }
-.va-t {
+.verticalAlignTop {
   vertical-align: top;
 }
-.va-b {
+.verticalAlignBottom {
   vertical-align: bottom;
 }
-.va-c {
+.verticalAlignMiddle {
   vertical-align: middle;
+}
+.positionAbsolute {
+  position: absolute;
+}
+.positionRelative {
+  position: relative;
+}
+.colorWhite {
+  color: white;
+}
+.colorRed {
+  color: red;
 }
 .position-list {
   margin: 0;

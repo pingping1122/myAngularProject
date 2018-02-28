@@ -1,9 +1,10 @@
 @import "../variable.less";
+@import "../property.less";
 
 .head {
   background-color: @headBgColor;
-  .h(40);
-  .lh(40);
+  .height(40);
+  .lineHeight(40);
   padding: 0 7px;
   .text {
     color: @defaultColor
@@ -12,8 +13,13 @@
     background-color: @warnColor;
     color: @defaultColor;
     border: 2px dashed @warnColor;
-    .mt(7);
-    .pl(15);
-    .pr(15);
+    .marginTop(7);
+    .paddingLeft(15);
+    .paddingRight(15);
   }
+}
+
+.back-btn {
+  font-size: 20px;
+  width: 1rem;
 }

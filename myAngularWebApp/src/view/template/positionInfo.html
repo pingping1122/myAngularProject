@@ -1,0 +1,14 @@
+<div class="backgroundWhite position-info">
+    <p><span ng-bind="pos.name"></span>
+        <span class="ml colorRed"
+              ng-bind="pos.salaryId"></span>
+    </p>
+    <p><span ng-bind="pos.cityName">上海</span>
+        <span class="ml" ng-bind="pos.experience"></span>
+        <span class="ml" ng-bind="pos.education"></span>
+    </p>
+    <p ng-bind="pos.benefit"></p>
+    <img class="positionAbsolute"
+         ng-show="isLogin"
+         ng-src="{{pos.imageUrl}}" alt="">
+</div>

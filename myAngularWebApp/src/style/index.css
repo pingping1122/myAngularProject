@@ -16,6 +16,10 @@
   padding-left: 0.4rem;
   padding-right: 0.4rem;
 }
+.back-btn {
+  font-size: 20px;
+  width: 1rem;
+}
 .foot {
   border-top: 1px solid #d4d4d4;
   padding: 0;
@@ -73,41 +77,130 @@
 .position-list .item .text {
   margin: 0;
 }
-.bg-w {
+.position-info {
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px 30px 10px 10px;
+}
+.position-info .ml {
+  margin-left: 20px;
+}
+.position-info img {
+  right: 24px;
+  top: 60px;
+}
+.company-info {
+  padding: 20px 15px 13px 15px;
+  height: 1.6rem;
+}
+.company-info img {
+  width: 1.6rem;
+  height: 1.6rem;
+  left: 15px;
+}
+.company-info p {
+  margin-left: 70px;
+  margin-top: 2px;
+}
+.position-class {
+  background-color: #fff;
+  border-top: 1px solid #d4d4d4;
+  padding: 13px 9px 5px 9px;
+}
+.position-class h5 {
+  margin: 0 0 35px 0;
+}
+.position-class button {
+  background-color: #def8f5;
+  border-radius: 20px;
+  padding: 10px 23px;
+}
+.position-class button.active {
+  background-color: #12d5b5;
+  color: #fff;
+}
+.position-class ul {
+  border-top: 1px solid #d4d4d4;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+.position-class ul li {
+  list-style: none;
+}
+.position-class ul li span {
+  color: red;
+  right: 10px;
+  top: 20px;
+}
+.backgroundWhite {
   background-color: #fff;
 }
-.f-l {
+.floatLeft {
   float: left;
 }
-.f-r {
+.floatRight {
   float: right;
 }
 .clear {
   clear: both;
 }
-.d-ib {
+.displayInlineBlock {
   display: inline-block;
 }
-.d-b {
+.displayBlock {
   display: block;
 }
-.ta-l {
+.textAlignLeft {
   text-align: left;
 }
-.ta-r {
+.textAlignRight {
   text-align: right;
 }
-.ta-c {
+.textAlignCenter {
   text-align: center;
 }
-.va-t {
+.verticalAlignTop {
   vertical-align: top;
 }
-.va-b {
+.verticalAlignBottom {
   vertical-align: bottom;
 }
-.va-c {
+.verticalAlignMiddle {
   vertical-align: middle;
+}
+.positionAbsolute {
+  position: absolute;
+}
+.positionRelative {
+  position: relative;
+}
+.colorWhite {
+  color: white;
+}
+.colorRed {
+  color: red;
+}
+.button-btn {
+  position: fixed;
+  height: 1.2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #12d5b5;
+}
+.position-desc {
+  margin-top: 10px;
+}
+.position-desc h5 {
+  border-bottom: 1px solid #ccc;
+  margin-top: 0;
+  margin-left: 10px;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+}
+.position-desc pre {
+  padding-left: 10px;
+  margin-top: 0;
 }
 /*fs\h\w 函数来做自适应--在不同屏幕上正常显示*/
 /*iphone6--width-375px--平局分成10份*/
