@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面表单验证</title>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="libs/font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .reg-wrapper {
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+        }
+
+        input.error {
+            border: 1px solid red;
+        }
+
+        input.success {
+            border: 1px solid green;
+        }
+
+        span.error {
+            color: red;
+        }
+
+        span.success {
+            color: green;
+        }
+
+        .input_result {
+            position: relative;
+            top: -36px;
+            margin-left: 270px;
+        }
+
+        i.default {
+            color: #ccc;
+        }
+
+        i.error {
+            color: red;
+        }
+
+        i.success {
+            color: green;
+        }
+
+        ul {
+            border: 1px solid #ccc;
+            margin-top: 8px;
+        }
+
+        ul li {
+            padding-left: 5px;
+            padding-top: 5px;
+            list-style-type: none;
+        }
+
+
+    </style>
+</head>
+<body ng-app="regModule" ng-controller="regCtrl">
+<div class="reg-wrapper">
+    <form name="regForm" novalidate ng-submit="submitForm()">
+        <div class="form-group">
+            <h2>用户注册</h2>
+        </div>
+
+        <div class="form-group">
+            <label>密码:</label>
+            <input type="text" name="pass" required
+                   ng-class="{error:regForm.pass.$touched&&!(regForm.pass.$error.empty
+                       &&!regForm.pass.$error.lengthOk
+                       &&!regForm.pass.$error.charPattern
+                       &&regForm.pass.$error.blank),
+                             success:regForm.pass.$error.empty
+                       &&!regForm.pass.$error.lengthOk
+                       &&!regForm.pass.$error.charPattern
+                       &&regForm.pass.$error.blank}"
+                   ng-model="userData.password"
+                   ng-focus="passwordRule=true"
+                   ng-blur="passwordRule=false"
+                   class="form-control"
+                   passcheck>
+            <ul ng-show="passwordRule">
+                <li>
+                    <i class="fa fa-circle-o default"
+                       ng-show="!regForm.pass.$error.empty"></i>
+                    <i class="fa fa-times error"
+                       ng-show="regForm.pass.$error.empty
+                       &&regForm.pass.$error.lengthOk">
+                    </i>
+                    <i class="fa fa-check success"
+                       ng-show="regForm.pass.$error.empty
+                       &&!regForm.pass.$error.lengthOk">
+                    </i>
+                    <span>8-32个字符.</span>
+                </li>
+                <li>
+                    <i class="fa fa-circle-o default"
+                       ng-show="!regForm.pass.$error.empty"></i>
+                    <i class="fa fa-times error"
+                       ng-show="regForm.pass.$error.empty
+                       &&regForm.pass.$error.charPattern">
+                    </i>
+                    <i class="fa fa-check success"
+                       ng-show="regForm.pass.$error.empty
+                       &&!regForm.pass.$error.charPattern">
+                    </i>
+                    <span>数字、大小写字母及特殊字符至少包含3种.</span>
+                </li>
+                <li>
+                    <i class="fa fa-circle-o default"
+                       ng-show="!regForm.pass.$error.empty"></i>
+                    <i class="fa fa-times error"
+                       ng-show="regForm.pass.$error.empty
+                       &&!regForm.pass.$error.blank">
+                    </i>
+                    <i class="fa fa-check success"
+                       ng-show="regForm.pass.$error.empty
+                       &&regForm.pass.$error.blank">
+                    </i>
+                    <span>不能含有空格.</span>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--密码确认-->
+          <div class="form-group">
+              <label>确认密码:</label>
+              <input type="text"
+                     name="pass2"
+                     required
+                     ng-model="userData.password2"
+                     ng-class="{error:regForm.pass2.$touched
+                               &&regForm.pass2.$error.compare,
+                      success:regForm.pass2.$valid}"
+                     compare="userData.password"
+                     class="form-control">
+              <span class="error"
+                    ng-if="regForm.pass2.$touched
+                    &&regForm.pass2.$error.compare">两次密码输入不一致</span>
+          </div>
+
+        <!--注册按钮-->
+        <div class="form-group">
+            <input class="btn btn-primary"
+                   ng-disabled="regForm.$invalid"
+                   type="submit"
+                   value="注册"
+            >
+        </div>
+    </form>
+</div>
+
+<script src="libs/angular.min.js"></script>
+<script src="directive.js"></script>
+</body>
+</html>
